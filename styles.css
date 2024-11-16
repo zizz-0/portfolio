@@ -306,7 +306,26 @@ hr {
 
 footer {
     background-color: var(--bluegray);
-    height: 200px;
+    text-align: center;
+    color: var(--white);
+    padding: 15px;
+}
+
+footer h2 {
+    font-weight: normal;
+}
+
+footer p {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footer-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 @keyframes blink {
