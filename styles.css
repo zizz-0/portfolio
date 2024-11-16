@@ -520,11 +520,13 @@ footer p {
         align-items: center;
         justify-items: center;
         margin-bottom: 10px;
+        padding-bottom: 0;
     }
 
     .project-img img {
         width: 300px;
         border-radius: 20px;
+        padding-bottom: 0;
     }
 
     .logo-flex {
