@@ -169,7 +169,6 @@ body:has(.side-menu:checked) {
 
 .intro-flex {
     height: 100vh;
-    padding-top: 30px;
 }
 
 #skills {
@@ -394,6 +393,7 @@ hr {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 110px;
     }
     
     #intro-pic {
