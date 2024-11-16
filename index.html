@@ -27,9 +27,9 @@
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="#projects" onclick="closeMenu()">projects</a></li>
-                <li><a href="#skills" onclick="closeMenu()">skills</a></li>
-                <li><a href="#experience" onclick="closeMenu()">experience</a> </li>
+                <li><a href="javascript:void(0);" onclick="smoothScroll('projects')">projects</a></li>
+                <li><a href="javascript:void(0);" onclick="smoothScroll('skills')">skills</a></li>
+                <li><a href="javascript:void(0);" onclick="smoothScroll('experience')">experience</a></li>
             </ul>
         </nav>
     </header>
@@ -202,6 +202,14 @@
 </body>
 
 <script>
+    function smoothScroll(targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        closeMenu();  // This will close the mobile menu if it’s open
+    }
+
     function myFunction() {
         var x = document.getElementById("menu");
         if (x.style.display === "block") {
