@@ -1113,3 +1113,14 @@ footer p {
         padding-left: 30px;
     }
 }
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    body {
+        background-color: lightblue; /* Debug style */
+    }
+}
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+    body {
+        background-color: yellow; /* Debug style */
+    }
+}
