@@ -651,7 +651,7 @@ footer p {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 175px);
     }
 
     #intro {
@@ -782,5 +782,56 @@ footer p {
     .exp-date {     
         border-left: 2px solid var(--darkpurple);
         padding-left: 5px;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .circle-img-big {
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .circle-img-small {
+        justify-content: center;
+        display: flex;
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .about-me {
+        font-size: 1.1em;
+    }
+
+    .intro-flex {
+        margin-left: 100px;
+        margin-right: 150px;
+    }
+
+    .section-header {
+        margin-left: 150px;
+    }
+
+    .projects-flex {
+        margin-left: 150px;
+        margin-right: 170px;
+    }
+
+    #skills h2 {
+        margin-left: 150px;
+    }
+
+    .logo-flex {
+        margin-left: 120px;
+    }
+
+    #experience ul {
+        margin-left: 170px;
+        padding-left: 30px;
     }
 }
