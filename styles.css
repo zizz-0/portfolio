@@ -855,7 +855,9 @@ footer p {
 @media only screen and (max-height: 600px) and (orientation: landscape) {
     
     #intro h1{
-        padding: 30px;
+        padding: 50px;
+        padding-bottom: 0;
+        padding-right: 0;
         font-size: 2em;
     }
 
@@ -897,7 +899,8 @@ footer p {
     }
 
     .type-flex {
-        padding-left: 30px;
+        padding-left: 50px;
+        padding-top: 15px;
     }
 
     .typewriter {
@@ -910,20 +913,36 @@ footer p {
 
     .intro-flex {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding-top: 30px;
+        padding-top: 0;
+        gap: 0;
+    }
+
+    .intro-flex > * {
+        margin: 0;
+    }
+
+    .intro-left {
+        width: 60%;
+    }
+
+    .intro-right {
+        width: 40%;
+    }
+
+    .about-me {
+        padding-left: 50px;
+        padding-right: 0;
     }
     
     #intro-pic {
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-
-    #intro {
-        width: 100%;
+        margin-right: 50px;
+        margin-left: 0;
     }
 
     .circle-img-big {
@@ -1020,11 +1039,15 @@ footer p {
         justify-content: center;
         margin: 15px;
         margin-left: 0;
+        width: 90%;
     }
 
     .project-desc p {
+        flex-basis: 100%;
         margin-bottom: 10px;
         margin-left: 15px;
+        display: block;
+        text-align: center;
     }
 
     .project-desc span {
@@ -1036,6 +1059,7 @@ footer p {
     .project-img {
         align-items: center;
         justify-items: center;
+        margin: auto;
         margin-bottom: 10px;
         padding-bottom: 0;
     }
@@ -1071,20 +1095,24 @@ footer p {
         text-align: center;
     }
 
+    .intro-flex {
+        margin-top: 50px;
+    }
+
     #projects {
-        padding-top: 0;
+        padding-top: 50px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     #skills {
-        padding-top: 0;
+        padding-top: 50px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     #experience {
-        padding-top: 0;
+        padding-top: 50px;
     }
 
     #experience ul {
@@ -1112,7 +1140,6 @@ footer p {
     }
 
     .exp-date {
-        display: block;
         margin-bottom: 10px;
     }
 }
