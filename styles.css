@@ -215,6 +215,11 @@ body:has(.side-menu:checked) {
     color: var(--lightpurple);
 }
 
+.project-title-flex h3 {
+    color: var(--lightpurple);
+    font-weight: normal;
+}
+
 .project-desc {
     flex-wrap: wrap;
     gap: 10px;
@@ -1013,6 +1018,15 @@ footer p {
     .project-img img {
         width: 300px;
         border-radius: 20px;
+    }
+
+    .project-links {
+        padding-left: 10px;
+    }
+
+    .project-desc span {
+        margin-left: 0;
+        margin-right: 10px;
     }
 
     #skills h2 {
