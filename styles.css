@@ -649,6 +649,9 @@ footer p {
     .intro-flex {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 100px);
     }
 
     #intro {
