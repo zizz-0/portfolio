@@ -605,7 +605,7 @@ footer p {
     }
 }
 
-@media only screen and (max-height: 600px) and (orientation: landscape) {
+@media only screen and (max-height: 600px) {
     #intro h1{
         padding: 30px;
         font-size: 2em;
