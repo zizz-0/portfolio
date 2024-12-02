@@ -853,10 +853,6 @@ footer p {
 
 /* landscape mobile phones */
 @media only screen and (max-height: 600px) and (orientation: landscape) {
-
-    body {
-        background-color: lightblue;
-    }
     
     #intro h1{
         padding: 30px;
@@ -922,7 +918,7 @@ footer p {
     
     #intro-pic {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -933,8 +929,8 @@ footer p {
     .circle-img-big {
         display: flex;
         justify-content: center;
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
         overflow: hidden;
         border-radius: 50%;
     }
@@ -947,15 +943,15 @@ footer p {
     
     .dodger-flex {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
     
     .circle-img-small {
         justify-content: center;
         display: flex;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         overflow: hidden;
         border-radius: 50%;
     }
@@ -968,15 +964,15 @@ footer p {
     
     #dodger {
         background-color: var(--bluegray);
-        padding: 20px;
+        padding: 10px;
         border-radius: 80px;
         color: #e5e5e5;
         font-size: 14px;
         text-align: center;
-        margin-top: 50px;
-        margin-left: 10px;
+        margin-top: 10px;
+        margin-left: 0;
         font-size: 0.7em;
-        max-width: 100px;
+        max-width: 150px;
     }
 
     .logo span {
@@ -1076,19 +1072,19 @@ footer p {
     }
 
     #projects {
-        padding-top: 50px;
+        padding-top: 0;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     #skills {
-        padding-top: 50px;
+        padding-top: 0;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     #experience {
-        padding-top: 50px;
+        padding-top: 0;
     }
 
     #experience ul {
