@@ -605,7 +605,7 @@ footer p {
     }
 }
 
-@media only screen and (orientation:landscape) and (max-device-width: 600px) {
+@media only screen and (orientation:landscape) and (max-device-width: 1200px) {
     #intro h1{
         padding: 30px;
         font-size: 2em;
