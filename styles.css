@@ -605,7 +605,259 @@ footer p {
     }
 }
 
-@media only screen and (max-height: 600px) {
+/* LAPTOP, DESKTOP, LANDSCAPE TABLETS */
+@media only screen and (min-width: 600px) {
+
+    #intro h1{
+        padding: 30px;
+        padding-left: 100px;
+        padding-top: 100px;
+        font-size: 4em;
+    }
+
+    .type-flex {
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+
+    .typewriter {
+        font-size: 2em;
+    }
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--gray);
+    }
+
+    .hamb{
+        display: none;
+    }
+
+    .about-me {
+        padding-left: 100px;
+        width: 75%;
+    }
+
+    .intro-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 175px);
+    }
+
+    #intro {
+        width: 75%;
+    }
+    
+    #intro-pic {
+        margin-top: 75px;
+        margin-right: 150px;
+    }
+    
+    .circle-img-big {
+        justify-content: center;
+        display: flex;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    
+    .circle-img-big img {
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+    }
+    
+    .dodger-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .circle-img-small {
+        justify-content: center;
+        display: flex;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    
+    .circle-img-small img {
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+    }
+    
+    #dodger {
+        background-color: var(--bluegray);
+        padding: 20px;
+        border-radius: 50px;
+        color: #e5e5e5;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 10px;
+        position: relative;
+        display: inline-block;
+        max-width: 150px;
+    }
+
+    .section-header {
+        margin-left: 90px;
+        margin-bottom: 20px;
+    }
+
+    .projects-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 90px;
+        margin-right: 120px;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+
+    .project-title-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .project-desc {
+        width: 65%;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .project-img {
+        align-items: center;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .project-img img {
+        width: 300px;
+        border-radius: 20px;
+    }
+
+    .project-links {
+        padding-left: 10px;
+    }
+
+    .project-desc span {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    #skills h2 {
+        margin-left: 90px;
+    }
+
+    #experience ul {
+        margin-left: 110px;
+        padding-left: 30px;
+    }
+    
+    #experience li { 
+        padding-left: 16px;
+        margin-top: 24px;
+        margin-right: 200px;
+        line-height: 20px;
+        
+        &:before {
+          content: '';
+          display: block;
+          height: 42px;
+          width: 42px;
+          border-radius: 50%;
+          border: 2px solid var(--darkpurple);
+          background-color: var(--darkpurple);
+          position: absolute;
+          left: -54px;
+        }
+    }
+
+    .exp-date {     
+        border-left: 2px solid var(--darkpurple);
+        padding-left: 5px;
+    }
+}
+
+/* large monitors */
+@media only screen and (min-width: 1920px){
+    .circle-img-big {
+        display: flex;
+        justify-content: center;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .circle-img-small {
+        justify-content: center;
+        display: flex;
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .about-me {
+        font-size: 1.1em;
+    }
+
+    .intro-flex {
+        margin-left: 100px;
+        margin-right: 150px;
+    }
+
+    .section-header {
+        margin-left: 150px;
+    }
+
+    .projects-flex {
+        margin-left: 150px;
+        margin-right: 170px;
+    }
+
+    #skills h2 {
+        margin-left: 150px;
+    }
+
+    .logo-flex {
+        margin-left: 120px;
+    }
+
+    #experience ul {
+        margin-left: 170px;
+        padding-left: 30px;
+    }
+}
+
+/* landscape mobile phones */
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+
+    body {
+        background-color: lightblue;
+    }
+    
     #intro h1{
         padding: 30px;
         font-size: 2em;
@@ -866,261 +1118,5 @@ footer p {
     .exp-date {
         display: block;
         margin-bottom: 10px;
-    }
-}
-
-/* LAPTOP, DESKTOP, LANDSCAPE TABLETS */
-@media only screen and (min-width: 600px) {
-
-    #intro h1{
-        padding: 30px;
-        padding-left: 100px;
-        padding-top: 100px;
-        font-size: 4em;
-    }
-
-    .type-flex {
-        padding-left: 100px;
-        padding-top: 50px;
-    }
-
-    .typewriter {
-        font-size: 2em;
-    }
-
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-
-    .menu li{
-        float: left;
-    }
-
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
-    }
-
-    .hamb{
-        display: none;
-    }
-
-    .about-me {
-        padding-left: 100px;
-        width: 75%;
-    }
-
-    .intro-flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: calc(100vh - 175px);
-    }
-
-    #intro {
-        width: 75%;
-    }
-    
-    #intro-pic {
-        margin-top: 75px;
-        margin-right: 150px;
-    }
-    
-    .circle-img-big {
-        justify-content: center;
-        display: flex;
-        width: 300px;
-        height: 300px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-    
-    .circle-img-big img {
-        margin: 0 auto;
-        height: 100%;
-        width: auto;
-    }
-    
-    .dodger-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    
-    .circle-img-small {
-        justify-content: center;
-        display: flex;
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-    
-    .circle-img-small img {
-        margin: 0 auto;
-        height: 100%;
-        width: auto;
-    }
-    
-    #dodger {
-        background-color: var(--bluegray);
-        padding: 20px;
-        border-radius: 50px;
-        color: #e5e5e5;
-        font-size: 14px;
-        text-align: center;
-        margin-top: 50px;
-        margin-left: 10px;
-        position: relative;
-        display: inline-block;
-        max-width: 150px;
-    }
-
-    .section-header {
-        margin-left: 90px;
-        margin-bottom: 20px;
-    }
-
-    .projects-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 90px;
-        margin-right: 120px;
-        border: 2px solid black;
-        border-radius: 20px;
-    }
-
-    .project-title-flex {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .project-desc {
-        width: 65%;
-        margin-left: 15px;
-        margin-bottom: 20px;
-    }
-
-    .project-img {
-        align-items: center;
-        margin-left: auto;
-        margin-right: 15px;
-    }
-
-    .project-img img {
-        width: 300px;
-        border-radius: 20px;
-    }
-
-    .project-links {
-        padding-left: 10px;
-    }
-
-    .project-desc span {
-        margin-left: 0;
-        margin-right: 10px;
-    }
-
-    #skills h2 {
-        margin-left: 90px;
-    }
-
-    #experience ul {
-        margin-left: 110px;
-        padding-left: 30px;
-    }
-    
-    #experience li { 
-        padding-left: 16px;
-        margin-top: 24px;
-        margin-right: 200px;
-        line-height: 20px;
-        
-        &:before {
-          content: '';
-          display: block;
-          height: 42px;
-          width: 42px;
-          border-radius: 50%;
-          border: 2px solid var(--darkpurple);
-          background-color: var(--darkpurple);
-          position: absolute;
-          left: -54px;
-        }
-    }
-
-    .exp-date {     
-        border-left: 2px solid var(--darkpurple);
-        padding-left: 5px;
-    }
-}
-
-@media only screen and (min-width: 1920px){
-    .circle-img-big {
-        display: flex;
-        justify-content: center;
-        width: 350px;
-        height: 350px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    .circle-img-small {
-        justify-content: center;
-        display: flex;
-        width: 175px;
-        height: 175px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    .about-me {
-        font-size: 1.1em;
-    }
-
-    .intro-flex {
-        margin-left: 100px;
-        margin-right: 150px;
-    }
-
-    .section-header {
-        margin-left: 150px;
-    }
-
-    .projects-flex {
-        margin-left: 150px;
-        margin-right: 170px;
-    }
-
-    #skills h2 {
-        margin-left: 150px;
-    }
-
-    .logo-flex {
-        margin-left: 120px;
-    }
-
-    #experience ul {
-        margin-left: 170px;
-        padding-left: 30px;
-    }
-}
-
-@media only screen and (max-height: 600px) and (orientation: landscape) {
-    body {
-        background-color: lightblue; /* Debug style */
-    }
-}
-@media only screen and (max-width: 600px) and (orientation: landscape) {
-    body {
-        background-color: yellow; /* Debug style */
     }
 }
