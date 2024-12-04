@@ -5,6 +5,7 @@
     --darkblue: #147cb0;
     --darkpurple: #523f7c;
     --lightblue: #2193cc;
+    --lighterblue: #63c1f0;
     --lightpurple: #785db2;
     --gray: #85888C;
     
@@ -63,6 +64,22 @@ ul {
     font-family: "JetBrains Mono";
     margin-left: 20px;
     margin-right: 10px;
+}
+
+.logo span:hover {
+    color: var(--lighterblue);
+}
+
+.linkedin:hover {
+    content:url("assets/logos/linkedin-blue.png");
+}
+
+.gmail:hover {
+    content:url("assets/logos/gmail-blue.png");
+}
+
+.github:hover {
+    content:url("assets/logos/github-blue.png");
 }
 
 .icons {
@@ -639,7 +656,7 @@ footer p {
 
     .menu a:hover{
         background-color: transparent;
-        color: var(--gray);
+        color: var(--lighterblue);
     }
 
     .hamb{
