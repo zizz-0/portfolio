@@ -90,6 +90,22 @@ ul {
     align-items: center;
 }
 
+.resume span {
+    visibility: visible;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    margin-left: 0;
+    font-size: 1em;
+}
+
+.resume span:hover {
+    color: var(--lighterblue);
+    border: 2px solid var(--lighterblue);
+}
+
 .nav{
     display: flex;
     margin-left: auto;
@@ -358,6 +374,14 @@ footer p {
 
 /* PORTRAIT MOBILE PHONES */
 @media only screen and (max-width: 600px) {
+
+    .resume, .resume span {
+        visibility: collapse;
+    }
+
+    .icons {
+        margin-right: 0;
+    }
 
     #intro h1{
         padding: 30px;
