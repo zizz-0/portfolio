@@ -67,7 +67,7 @@
                     <br>
                     <span>Python</span><span>C++</span><span>Raspberry Pi</span><span>OpenCV</span>
                 </div>
-                <div class="project-img">
+                <div class="project-img" onclick="openImage(this)">
                     <img src="assets/projects/WARDEN.jpg">
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     <br>
                     <span>Python</span><span>NetworkX</span><span>Matplotlib</span>
                 </div>
-                <div class="project-img">
+                <div class="project-img" onclick="openImage(this)">
                     <img src="assets/projects/wikirace.png">
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <br>
                     <span>Java</span><span>Angular</span><span>REST</span><span>Spring</span><span>SonarQube</span><span>OpenUP</span><span>Scrum</span>
                 </div>
-                <div class="project-img">
+                <div class="project-img" onclick="openImage(this)">
                     <img src="assets/projects/ufund.png">
                 </div>
             </div>
@@ -112,7 +112,7 @@
                     <br>
                     <span>JavaScript</span><span>HTML</span><span>CSS</span><span>GitHub Pages</span>
                 </div>
-                <div class="project-img">
+                <div class="project-img" onclick="openImage(this)">
                     <img src="assets/projects/vexscoring.png">
                 </div>
             </div>
@@ -138,9 +138,13 @@
                     <br>
                     <span>Bootstrap</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>GitHub Pages</span>
                 </div>
-                <div class="project-img">
+                <div class="project-img" onclick="openImage(this)">
                     <img src="assets/projects/vexwebsite.png">
                 </div>
+            </div>
+            <div id="imageModal" class="image-modal" onclick="closeImage()">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="img01">
             </div>
         </div>
 
@@ -236,6 +240,20 @@
 
     function closeMenu() {
         document.getElementById("side-menu").checked = false;
+    }
+
+    function openImage(element) {
+        var img = element.querySelector('img');
+        
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+    }
+
+    function closeImage() {
+        var modal = document.getElementById("imageModal");
+        modal.style.display = "none";
     }
 </script>
 
