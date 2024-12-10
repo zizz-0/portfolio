@@ -623,6 +623,10 @@ footer p {
         transform: scale(1);
     }
 
+    #skills h2 {
+        margin-top: 30px;
+    }
+
     .logo-flex {
         display: flex;
         flex-direction: row;
