@@ -639,7 +639,8 @@ footer p {
     }
 
     .logo-flex img {
-        width: 70px;
+        height: 70px;
+        width: auto;
     }
 
     #skills h2 {
