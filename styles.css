@@ -277,9 +277,24 @@ body:has(.side-menu:checked) {
     margin-left: 0;
 }
 
+.section-header-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkblue);
+    font-weight: normal;
+}
+
 #skills h2 {
     color: var(--lightpurple);
     font-weight: normal;
+}
+
+.big-logo-flex {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
 }
 
 .logo-flex {
@@ -288,11 +303,48 @@ body:has(.side-menu:checked) {
     flex-wrap: wrap;
     margin: 15px;
     margin-left: 60px;
+    /* max-width: 45%; */
     align-items: center;
+    justify-content: center;
 }
 
-.logo-flex span {
-    margin: 30px;
+.logo-flex-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+    /* max-width: 45%; */
+    align-items: center;
+    justify-content: center;
+}
+
+.single-logo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 30px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #2193cc;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-logo:hover {
+    background-color: #785db2;
+    border-color: #785db2;
+}
+
+.single-logo:hover p {
+    color: #e5e5e5;
+}
+
+.single-logo p {
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #147cb0;
 }
 
 .project-links {
@@ -637,12 +689,23 @@ footer p {
         justify-content: center;
         margin-bottom: 0;
     }
+
+    .logo-flex-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 15px;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
     
-    .logo-flex span {
+    .single-logo span {
         margin: 15px;
     }
 
-    .logo-flex img {
+    .single-logo img {
         height: 70px;
         width: auto;
     }
@@ -1179,12 +1242,23 @@ footer p {
         justify-content: center;
         margin-bottom: 0;
     }
+
+    .logo-flex-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 15px;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
     
-    .logo-flex span {
+    .single-logo span {
         margin: 15px;
     }
 
-    .logo-flex img {
+    .single-logo img {
         width: 70px;
     }
 
