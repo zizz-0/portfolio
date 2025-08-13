@@ -82,6 +82,54 @@ ul {
     content:url("assets/logos/github-blue.png");
 }
 
+#python:hover img {
+    content:url("assets/logos/white/python.png");
+}
+
+#java:hover img {
+    content:url("assets/logos/white/java.png");
+}
+
+#c:hover img {
+    content:url("assets/logos/white/c.png");
+}
+
+#js:hover img {
+    content:url("assets/logos/white/javascript.png");
+}
+
+#html:hover img {
+    content:url("assets/logos/white/html.png");
+}
+
+#css:hover img {
+    content:url("assets/logos/white/css.png");
+}
+
+#bootstrap:hover img {
+    content:url("assets/logos/white/bootstrap.png");
+}
+
+#nextjs:hover img {
+    content:url("assets/logos/white/nextjs.png");
+}
+
+#git:hover img {
+    content:url("assets/logos/white/git.png");
+}
+
+#opencv:hover img {
+    content:url("assets/logos/white/opencv.png");
+}
+
+#postgres:hover img {
+    content:url("assets/logos/white/postgres.png");
+}
+
+#raspi:hover img {
+    content:url("assets/logos/white/raspi.png");
+}
+
 .icons {
     display: flex;
     padding: 15px;
