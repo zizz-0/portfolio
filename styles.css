@@ -407,12 +407,12 @@ body:has(.side-menu:checked) {
     padding-top: 120px;
 }
 
-#experience ul {
+.exp-ul {
     border-left: 4px solid var(--darkpurple);
     padding-bottom: 50px;
 }
 
-#experience li { 
+.exp-li { 
     color: #4F4F4F;
     font-size: 1em;
     position: relative;
@@ -772,12 +772,12 @@ footer p {
         padding-top: 50px;
     }
 
-    #experience ul {
+    .exp-ul {
         margin-left: 50px;
         padding-left: 20px;
     }
     
-    #experience li { 
+    .exp-li { 
         padding-left: 16px;
         margin-top: 24px;
         margin-right: 50px;
@@ -799,10 +799,22 @@ footer p {
     .exp-spans {
         display: flex;
         flex-wrap: wrap;
+        margin-top: 20px;
     }
 
     .exp-span {
         margin: 1px;
+    }
+
+    .ind-exp-ul {
+        list-style: circle;
+    }
+
+    .ind-exp-ul li {
+        padding-top: 10px;
+        margin-left: 16px;
+        margin-right: 25px;
+        padding-left: 5px;
     }
 
     .exp-date {
@@ -1000,12 +1012,12 @@ footer p {
         margin-left: 90px;
     }
 
-    #experience ul {
+    .exp-ul {
         margin-left: 110px;
         padding-left: 30px;
     }
     
-    #experience li { 
+    .exp-li { 
         padding-left: 16px;
         margin-top: 24px;
         margin-right: 200px;
@@ -1022,6 +1034,20 @@ footer p {
           position: absolute;
           left: -54px;
         }
+    }
+
+    .ind-exp-ul {
+        list-style: circle;
+    }
+
+    .ind-exp-ul li {
+        padding-top: 10px;
+        margin-left: 16px;
+        padding-left: 5px;
+    }
+
+    .exp-spans {
+        margin-top: 20px;
     }
 
     .exp-date {     
@@ -1076,7 +1102,7 @@ footer p {
         margin-left: 120px;
     }
 
-    #experience ul {
+    .exp-ul {
         margin-left: 170px;
         padding-left: 30px;
     }
@@ -1363,12 +1389,12 @@ footer p {
         padding-top: 50px;
     }
 
-    #experience ul {
+    .exp-ul {
         margin-left: 50px;
         padding-left: 20px;
     }
     
-    #experience li { 
+    .exp-li { 
         padding-left: 16px;
         margin-top: 24px;
         margin-right: 50px;
