@@ -238,6 +238,9 @@ em {
   color: var(--accent);
   margin-left: 4px;
 }
+.modal-project span {
+  color: var(--accent);
+}
 .menu-toggle {
   display: none;
   border: 0;
