@@ -447,7 +447,6 @@ h2 {
 }
 .project-row:hover .project-image {
   filter: saturate(1);
-  transform: translateY(-6px);
 }
 .project-image span {
   position: absolute;
