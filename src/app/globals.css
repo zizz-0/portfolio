@@ -470,6 +470,7 @@ h2 {
   display: grid;
   place-items: center;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
 }
 .image-lightbox-image {
   display: block;
@@ -777,7 +778,7 @@ h2 {
   line-height: 1;
   transform: translateY(-50%);
 }
-.modal-skill-arrow:hover {
+.modal-skill-arrow:hover, .modal-close:hover {
   color: var(--accent);
 }
 .modal-skill-prev {
@@ -791,6 +792,11 @@ h2 {
 }
 .modal-project {
   border-bottom: 1px solid var(--line);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.modal-project:not(.is-expanded):hover {
+  background: rgba(241, 239, 233, 0.08);
 }
 .modal-project-toggle {
   display: flex;
