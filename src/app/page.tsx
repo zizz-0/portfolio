@@ -418,7 +418,7 @@ export default function Home() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {link.label} ↗
+                      {link.label} ↗︎
                     </a>
                   ))}
                 </div>
@@ -698,7 +698,7 @@ export default function Home() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {link.label} ↗
+                                {link.label} ↗︎
                               </a>
                             ))}
                           </div>
