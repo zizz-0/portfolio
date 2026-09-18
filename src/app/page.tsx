@@ -189,7 +189,7 @@ const experience = [
     dates: "Aug 2025 — Dec 2025",
     bullets: [
       "Assisted 40+ students with a semester-long project focused on UI/UX and human-computer interaction",
-      "Evaluated work and give constructive feedback that improves usability and design quality",
+      "Evaluated work and gave constructive feedback that improves usability and design quality",
     ],
     skills: ["Figma", "UI/UX"],
   },
@@ -483,7 +483,6 @@ export default function Home() {
                   </span>
                 )}
                 <span>{skill.name}</span>
-                <i>↗</i>
               </button>
             ))}
           </div>
