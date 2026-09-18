@@ -1,8 +1,9 @@
 :root {
-  --ink: #111315;
-  --ink-soft: #191c1f;
-  --paper: #f1efe9;
-  --muted: #a4a7a4;
+  --default-background: #111315;
+  --default-background-soft: #191c1f;
+  --default-font: #f1efe9;
+  --light-text: #a4a7a4;
+  --light-hover: #cbd0d88b;
   --line: rgba(241, 239, 233, 0.16);
   --accent: #a855f7;
   --net-node: rgba(180, 188, 193, 0.58);
@@ -18,20 +19,20 @@ html {
 }
 body {
   margin: 0;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--default-background);
+  color: var(--default-font);
   font-family: Trebuchet MS, sans-serif;
 }
 main {
   min-height: 100vh;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--default-background);
+  color: var(--default-font);
 }
 .light-mode {
-  --ink: #dde1e7;
-  --ink-soft: #dfe3e8;
-  --paper: #111315;
-  --muted: #59616b;
+  --default-background: #d8dce3;
+  --default-background-soft: #dfe3e8;
+  --default-font: #111315;
+  --light-text: #59616b;
   --line: rgba(17, 19, 21, 0.16);
 }
 a {
@@ -63,6 +64,7 @@ button {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
+  background: var(--default-background);
   background: radial-gradient(
     circle at 80% 15%,
     rgba(38, 37, 35, 0.8) 0,
@@ -71,8 +73,9 @@ button {
   );
 }
 .light-mode .site-header {
+  background: var(--default-background);
   background: radial-gradient(
-    circle at 80% 15%,
+    circle 300px at 80% 15%,
     rgba(255, 255, 255, 0.9) 0,
     rgb(221, 225, 231) 46%,
     rgba(220, 225, 231, 0.9) 100%
@@ -109,7 +112,7 @@ button {
   backdrop-filter: blur(10px);
 }
 .light-mode .nav {
-  background: rgb(221, 225, 231);
+  background: var(--default-background);
 }
 .nav-left {
   display: flex;
@@ -120,7 +123,7 @@ button {
   width: 54px;
   height: 28px;
   padding: 3px;
-  border: 1px solid var(--paper);
+  border: 1px solid var(--default-font);
   border-radius: 999px;
   background: #111315;
   cursor: pointer;
@@ -148,7 +151,7 @@ button {
 }
 .theme-toggle.is-light {
   border-color: #111315;
-  background: #dde1e7;
+  background: var(--default-background);
 }
 .theme-toggle.is-light .theme-toggle-track img {
   transform: translateX(26px);
@@ -204,7 +207,7 @@ em {
   display: flex;
   align-items: center;
   gap: 34px;
-  color: var(--paper);
+  color: var(--default-font);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -224,7 +227,7 @@ em {
   transform: translateY(-2px);
 }
 .nav-contact {
-  color: var(--paper) !important;
+  color: var(--default-font) !important;
   border-bottom: 1px solid var(--accent);
   padding-bottom: 6px;
 }
@@ -266,7 +269,7 @@ em {
 .hero-role {
   min-height: 1.35em;
   margin: 0 0 30px;
-  color: var(--paper);
+  color: var(--default-font);
   font-family: var(--font-geist-mono), monospace;
   font-size: clamp(1.15rem, 2vw, 1.55rem);
   letter-spacing: 0.02em;
@@ -286,7 +289,7 @@ em {
 .hero-copy {
   max-width: 390px;
   margin: 0 0 35px;
-  color: var(--muted);
+  color: var(--light-text);
   font-size: 0.96rem;
   line-height: 1.75;
 }
@@ -301,7 +304,7 @@ em {
   position: absolute;
   bottom: 34px;
   left: max(48px, calc((100% - 1180px) / 2));
-  color: var(--muted);
+  color: var(--light-text);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.62rem;
   letter-spacing: 0.1em;
@@ -322,6 +325,9 @@ em {
   align-items: end;
   justify-content: space-between;
   margin-bottom: 65px;
+}
+.section p, .section h2, .section h3, .section span {
+  z-index: 1;
 }
 .section-heading .eyebrow {
   margin: 0 0 9px;
@@ -359,7 +365,7 @@ h2 {
 }
 .project-kind {
   grid-column: 2;
-  color: var(--muted);
+  color: var(--light-text);
 }
 .project-copy h3 {
   grid-column: 2;
@@ -388,7 +394,7 @@ h2 {
   grid-column: 2;
   max-width: 500px;
   margin: 30px 0 25px;
-  color: var(--muted);
+  color: var(--light-text);
   font-size: 0.88rem;
   line-height: 1.75;
 }
@@ -412,8 +418,8 @@ h2 {
   color: var(--accent);
 }
 .light-mode .tags span {
-  border-color: var(--muted);
-  color: var(--muted);
+  border-color: var(--light-text);
+  color: var(--light-text);
 }
 .project-image {
   position: relative;
@@ -422,7 +428,7 @@ h2 {
   width: 100%;
   padding: 0;
   border: 0;
-  background-color: var(--ink-soft);
+  background-color: var(--default-background-soft);
   overflow: hidden;
   cursor: pointer;
   transition:
@@ -447,7 +453,7 @@ h2 {
   bottom: 18px;
   right: 18px;
   z-index: 1;
-  color: var(--paper);
+  color: var(--default-font);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.62rem;
   text-transform: uppercase;
@@ -479,7 +485,7 @@ h2 {
   z-index: 1;
   border: 0;
   background: transparent;
-  color: var(--paper);
+  color: var(--default-font);
   cursor: pointer;
 }
 .image-lightbox-close {
@@ -507,7 +513,7 @@ h2 {
 
 .skills-section {
   background: transparent;
-  color: var(--paper);
+  color: var(--default-font);
 }
 .skills-section .section-heading {
   border-bottom: 1px solid var(--line);
@@ -519,7 +525,7 @@ h2 {
 .section-intro {
   max-width: 430px;
   margin: -20px 0 60px auto;
-  color: var(--muted);
+  color: var(--light-text);
   font-size: 0.9rem;
   line-height: 1.65;
 }
@@ -546,6 +552,9 @@ h2 {
   cursor: pointer;
   text-align: left;
   transition: background 0.2s ease;
+}
+.skill-card:hover {
+  background: rgba(241, 239, 233, 0.08);
 }
 .skill-card:hover {
   background: rgba(241, 239, 233, 0.08);
@@ -617,6 +626,9 @@ h2 {
 .light-mode .skill-card:hover .skill-logo-hover {
   filter: none;
 }
+.light-mode .skill-card:hover {
+  background: var(--light-hover);
+}
 .skill-card i {
   position: absolute;
   top: 23px;
@@ -630,7 +642,6 @@ h2 {
 .skill-card:hover i {
   opacity: 1;
 }
-
 .experience-list {
   border-top: 1px solid var(--line);
 }
@@ -645,7 +656,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  color: var(--muted);
+  color: var(--light-text);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.65rem;
   text-transform: uppercase;
@@ -679,7 +690,7 @@ h2 {
   max-width: 650px;
   margin: 0 0 28px;
   padding-left: 17px;
-  color: var(--muted);
+  color: var(--light-text);
   font-size: 0.88rem;
   line-height: 1.75;
 }
@@ -691,10 +702,10 @@ h2 {
 .footer {
   padding: 42px 0 14px;
   background: rgba(168, 85, 247, 0.92);
-  color: var(--ink);
+  color: var(--default-background);
 }
 .footer .eyebrow {
-  color: var(--ink);
+  color: var(--default-background);
 }
 .footer-inner {
   display: block;
@@ -708,7 +719,7 @@ h2 {
   font-size: 2.5em;
 }
 .footer h2 span {
-  color: var(--ink);
+  color: var(--default-background);
 }
 .footer-copy {
   width: min(70vw, 760px);
@@ -742,8 +753,8 @@ h2 {
   position: relative;
   overflow-y: auto;
   padding: 45px 70px;
-  background: var(--ink-soft);
-  color: var(--paper);
+  background: var(--default-background-soft);
+  color: var(--default-font);
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
 }
 .skill-modal h2 {
@@ -756,7 +767,7 @@ h2 {
   right: 22px;
   border: 0;
   background: transparent;
-  color: var(--paper);
+  color: var(--default-font);
   cursor: pointer;
   font-size: 1.8rem;
 }
@@ -766,7 +777,7 @@ h2 {
   padding: 0 12px;
   border: 0;
   background: transparent;
-  color: var(--paper);
+  color: var(--default-font);
   cursor: pointer;
   font-size: 3.5rem;
   line-height: 1;
@@ -800,7 +811,7 @@ h2 {
   padding: 10px 0 2px;
   border: 0;
   background: transparent;
-  color: var(--paper);
+  color: var(--default-font);
   cursor: pointer;
   font-size: 0.9rem;
   text-align: left;
@@ -862,7 +873,7 @@ h2 {
   width: 100%;
   padding: 0;
   border: 0;
-  background: var(--ink);
+  background: var(--default-background);
   cursor: pointer;
   overflow: hidden;
 }
@@ -899,7 +910,7 @@ h2 {
     align-items: stretch;
     gap: 0;
     padding: 10px 20px;
-    background: var(--ink-soft);
+    background: var(--default-background-soft);
     border: 1px solid var(--line);
   }
   .site-menu.is-open {
@@ -983,7 +994,7 @@ h2 {
   .experience-mobile-date {
     display: block;
     margin: 0 0 25px;
-    color: var(--muted);
+    color: var(--light-text);
     font-family: var(--font-geist-mono), monospace;
     font-size: 0.65rem;
     text-transform: uppercase;
