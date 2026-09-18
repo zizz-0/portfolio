@@ -369,6 +369,9 @@ h2 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.modal-kind {
+  margin: 0 0 0;
+}
 .project-kind {
   grid-column: 2;
   color: var(--light-text);
@@ -400,6 +403,9 @@ h2 {
   font-size: 0.88rem;
   line-height: 1.75;
 }
+.modal-tagline {
+  margin: 5px 0 15px;
+}
 .project-description {
   grid-column: 2;
   max-width: 500px;
@@ -407,6 +413,9 @@ h2 {
   color: var(--light-text);
   font-size: 0.88rem;
   line-height: 1.75;
+}
+.modal-description {
+  margin: 15px 0 25px;
 }
 .tags {
   display: flex;

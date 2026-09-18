@@ -7,6 +7,10 @@ import { useEffect, useState, type ReactNode } from "react";
  *  favicon
  *  rephrase descriptions
  *  small bio
+ *  remove skills modal images on mobile
+ *  maybe add solids board
+ *  maybe add senior project
+ *  static starmap!
 */
 
 type Project = {
@@ -109,6 +113,17 @@ const skillOnlyProjects: Project[] = [
       { label: "GitHub", href: "https://github.com/zizz-0/ufund-donations" },
     ],
   },
+  {
+    title: "Portfolio Site",
+    kind: "Web application",
+    tagline: "This website!",
+    description: "",
+    skills: ["React", "JavaScript"],
+    images: ["/portfolio.png"],
+    links: [
+      { label: "GitHub", href: "https://github.com/zizz-0/portfolio" },
+    ],
+  },
 ];
 
 const projectByTitle = (title: string) =>
@@ -143,7 +158,7 @@ const skills: Skill[] = [
     mark: "/logos/white/javascript.png",
     hoverMark: "/logos/javascript.webp",
     color: "#f7df1e",
-    projects: ["Photo Gallery", "U-Fund Donations Board"],
+    projects: ["Photo Gallery", "U-Fund Donations Board", "Portfolio Site"],
   },
   {
     name: "TypeScript",
@@ -151,7 +166,7 @@ const skills: Skill[] = [
     hoverMark: "/logos/typescript.png",
     color: "#3178c6",
     useWhiteFilter: true,
-    projects: ["DrDebug", "Photo Gallery", "Portfolio site"],
+    projects: ["DrDebug", "Photo Gallery"],
   },
   {
     name: "React",
@@ -159,7 +174,7 @@ const skills: Skill[] = [
     hoverMark: "/logos/react.png",
     color: "#61dafb",
     useWhiteFilter: true,
-    projects: ["Photo Gallery", "Portfolio site"],
+    projects: ["Photo Gallery", "Portfolio Site"],
   },
   {
     name: "Spring Boot",
@@ -693,10 +708,9 @@ export default function Home() {
                     <div className="modal-project-details-wrap">
                       <div className="modal-project-details">
                         <div className="modal-project-copy">
-                          <p className="project-kind">{project.kind}</p>
-                          <h3>{project.title}</h3>
-                          <p className="project-tagline">{project.tagline}</p>
-                          <div className="project-links">
+                          <p className="project-kind modal-kind">{project.kind}</p>
+                          <p className="project-tagline modal-tagline">{project.tagline}</p>
+                          <div className="project-links modal-links">
                             {project.links.map((link) => (
                               <a
                                 href={link.href}
@@ -708,7 +722,7 @@ export default function Home() {
                               </a>
                             ))}
                           </div>
-                          <p className="project-description">
+                          <p className="project-description modal-description">
                             {project.description}
                           </p>
                         </div>
