@@ -688,7 +688,7 @@ export default function Home() {
                         )
                       }
                     >
-                      {project.title} <span className="external-link-arrow" aria-hidden="true">↘</span>
+                      {project.title} <span className="external-link-arrow modal-project-arrow" aria-hidden="true">↗︎</span>
                     </button>
                     <div className="modal-project-details-wrap">
                       <div className="modal-project-details">

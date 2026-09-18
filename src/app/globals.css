@@ -241,6 +241,9 @@ em {
 .modal-project span {
   color: var(--accent);
 }
+.modal-project-arrow {
+  transform: rotate(90deg);
+}
 .menu-toggle {
   display: none;
   border: 0;
@@ -830,7 +833,7 @@ h2 {
   transition: transform 0.2s ease;
 }
 .modal-project.is-expanded .external-link-arrow {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 .modal-project-details-wrap {
   display: grid;
