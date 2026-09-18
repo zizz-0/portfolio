@@ -2,6 +2,13 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 
+/* TODO:
+ *  profile pic?
+ *  favicon
+ *  rephrase descriptions
+ *  small bio
+*/
+
 type Project = {
   title: string;
   kind: string;
@@ -682,7 +689,7 @@ export default function Home() {
                       }
                     >
                       <span>{project.title}</span>
-                      <b>↘</b>
+                      <span className="external-link-arrow" aria-hidden="true">↘</span>
                     </button>
                     <div className="modal-project-details-wrap">
                       <div className="modal-project-details">

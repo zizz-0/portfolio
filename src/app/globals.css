@@ -826,7 +826,7 @@ h2 {
   font-weight: 400;
   transition: transform 0.2s ease;
 }
-.modal-project.is-expanded .modal-project-toggle b {
+.modal-project.is-expanded .external-link-arrow {
   transform: rotate(90deg);
 }
 .modal-project-details-wrap {
