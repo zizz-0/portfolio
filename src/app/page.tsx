@@ -418,7 +418,7 @@ export default function Home() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {link.label} ↗︎
+                      {link.label} <span className="external-link-arrow" aria-hidden="true">↗︎</span>
                     </a>
                   ))}
                 </div>
@@ -698,7 +698,7 @@ export default function Home() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                {link.label} ↗︎
+                                {link.label} <span className="external-link-arrow" aria-hidden="true">↗︎</span>
                               </a>
                             ))}
                           </div>

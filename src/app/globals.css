@@ -382,6 +382,10 @@ h2 {
   font-size: 0.65rem;
   text-transform: uppercase;
 }
+.external-link-arrow {
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", Trebuchet MS, sans-serif;
+  font-variant-emoji: text;
+}
 .project-tagline {
   grid-column: 2;
   max-width: 500px;
