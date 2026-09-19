@@ -40,7 +40,8 @@
     var ctx = canvas.getContext && canvas.getContext("2d");
     if (!ctx) return;
 
-    var LINK = 152; // px within which two nodes link
+    var isMobile = w <= 720;
+    var LINK = isMobile ? 130 : 220; // px within which two nodes link
     var LINK_SQ = LINK * LINK;
     var CURSOR = 190; // px within which a node reacts to the pointer
     var FACET = 150; // tighter radius that grows the geometric facets
@@ -125,7 +126,15 @@
     function resize() {
       var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       w = Math.max(1, Math.round(window.innerWidth));
-      h = Math.max(1, Math.round(window.innerHeight));
+      h = Math.max(
+        1,
+        Math.round(
+          Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight,
+          ),
+        ),
+      );
       canvas.width = Math.round(w * dpr);
       canvas.height = Math.round(h * dpr);
       canvas.style.width = w + "px";
@@ -139,8 +148,9 @@
     // count is the cheapest lever on weak hardware.
     function targetCount() {
       var cores = navigator.hardwareConcurrency || 4;
-      var perNode = cores <= 4 ? 14000 : 10000;
-      var ceiling = cores <= 4 ? 30 : 46;
+      var isMobile = w <= 720;
+      var perNode = isMobile ? 10000 : cores <= 4 ? 3500 : 2500;
+      var ceiling = isMobile ? 100 : cores <= 4 ? 180 : 260;
       return Math.round(Math.max(14, Math.min(ceiling, (w * h) / perNode)));
     }
 
@@ -191,7 +201,7 @@
 
       packets = [];
       rings = [];
-      var want = Math.max(7, Math.min(16, Math.floor(count / 2.6)));
+      var want = Math.max(40, Math.min(16, Math.floor(count / 2.6)));
       for (var j = 0; j < want; j++) packets.push(spawnPacket());
     }
 
@@ -553,7 +563,7 @@
         function (e) {
           if (e.pointerType && e.pointerType !== "mouse") return;
           var x = e.clientX;
-          var y = e.clientY;
+          var y = e.clientY + window.scrollY;
           if (!pointer.on) {
             // Seed the previous sample on entry, or the first frame
             // reads as one huge jump and dumps a burst of rings.

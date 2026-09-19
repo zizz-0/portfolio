@@ -7,10 +7,9 @@ import { useEffect, useState, type ReactNode } from "react";
  *  favicon
  *  rephrase descriptions
  *  small bio
- *  remove skills modal images on mobile
  *  maybe add solids board
  *  maybe add senior project
- *  static starmap!
+ *  center opencv
 */
 
 type Project = {
@@ -118,7 +117,7 @@ const skillOnlyProjects: Project[] = [
     kind: "Web application",
     tagline: "This website!",
     description: "",
-    skills: ["React", "JavaScript"],
+    skills: ["React", "JavaScript", "TypeScript"],
     images: ["/portfolio.png"],
     links: [
       { label: "GitHub", href: "https://github.com/zizz-0/portfolio" },
@@ -166,7 +165,7 @@ const skills: Skill[] = [
     hoverMark: "/logos/typescript.png",
     color: "#3178c6",
     useWhiteFilter: true,
-    projects: ["DrDebug", "Photo Gallery"],
+    projects: ["DrDebug", "Photo Gallery", "Portfolio Site"],
   },
   {
     name: "React",
@@ -334,8 +333,8 @@ export default function Home() {
 
   return (
     <main className={isDarkMode ? "" : "light-mode"}>
+      <canvas className="netfield" aria-hidden="true" />
       <header className="site-header" id="top">
-        <canvas className="netfield" aria-hidden="true" />
         <nav className="nav shell" aria-label="Main navigation">
           <div className="nav-left">
             <button
@@ -358,7 +357,17 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                <img src="/logos/linkedin.png" alt="" />
+                <img
+                  className="header-logo-default"
+                  src="/logos/linkedin.png"
+                  alt=""
+                />
+                <img
+                  className="header-logo-hover"
+                  src="/logos/linkedin-purple.png"
+                  alt=""
+                  aria-hidden="true"
+                />
               </a>
               <a
                 href="https://github.com/zizz-0"
@@ -366,10 +375,30 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="GitHub"
               >
-                <img src="/logos/github.png" alt="" />
+                <img
+                  className="header-logo-default"
+                  src="/logos/github.png"
+                  alt=""
+                />
+                <img
+                  className="header-logo-hover"
+                  src="/logos/github-purple.png"
+                  alt=""
+                  aria-hidden="true"
+                />
               </a>
               <a href="mailto:rizzo.zoej@gmail.com" aria-label="Email">
-                <img src="/logos/gmail.png" alt="" />
+                <img
+                  className="header-logo-default"
+                  src="/logos/gmail.png"
+                  alt=""
+                />
+                <img
+                  className="header-logo-hover"
+                  src="/logos/gmail-purple.png"
+                  alt=""
+                  aria-hidden="true"
+                />
               </a>
             </div>
           </div>

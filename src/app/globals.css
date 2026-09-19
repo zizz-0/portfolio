@@ -24,6 +24,7 @@ body {
   font-family: Trebuchet MS, sans-serif;
 }
 main {
+  position: relative;
   min-height: 100vh;
   background: var(--default-background);
   color: var(--default-font);
@@ -43,6 +44,15 @@ button {
   color: inherit;
   font: inherit;
 }
+p, span, h1, h2, h3, h4, li {
+  text-shadow: -1px 1px 2px #000000;
+  z-index: 1;
+}
+
+.footer p, span, h1, h2, h3, h4, li {
+  text-shadow: 0 0 0 !important;
+}
+
 .shell {
   width: min(1180px, calc(100% - 96px));
   margin: 0 auto;
@@ -82,9 +92,10 @@ button {
   );
 }
 .netfield {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -93,7 +104,12 @@ button {
 .hero,
 .scroll-note {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+.section,
+.footer {
+  position: relative;
+  z-index: 2;
 }
 .nav {
   position: fixed;
@@ -175,14 +191,25 @@ button {
   opacity: 1;
   transform: translateY(-2px);
 }
-.header-links a:hover {
-  filter: invert(66%) sepia(88%) saturate(3500%) hue-rotate(247deg) brightness(99%) contrast(95%);
-}
 .social-links img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.header-links a {
+  position: relative;
+}
+.header-links .header-logo-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.header-links a:hover .header-logo-default {
+  opacity: 0;
+}
+.header-links a:hover .header-logo-hover {
+  opacity: 1;
 }
 .footer-links {
   filter: invert(1);
@@ -194,8 +221,8 @@ button {
 .light-mode .social-links img {
   filter: invert(1);
 }
-.light-mode .header-links a:hover {
-  filter: invert(66%) sepia(88%) saturate(3500%) hue-rotate(225deg) brightness(90%) contrast(95%);
+.light-mode .header-links .header-logo-hover {
+  filter: none;
 }
 
 h2 span,
@@ -454,6 +481,9 @@ h2 {
     filter 0.35s ease,
     transform 0.35s ease;
 }
+.project-image:hover {
+  opacity: 0.6;
+}
 .project-image img {
   display: block;
   width: 100%;
@@ -463,9 +493,6 @@ h2 {
   position: absolute;
   inset: 0;
   content: "";
-}
-.project-row:hover .project-image {
-  filter: saturate(1);
 }
 .project-image span {
   position: absolute;
@@ -660,6 +687,10 @@ h2 {
 }
 .skill-card:hover i {
   opacity: 1;
+}
+#experience {
+  position: relative;
+  z-index: 1;
 }
 .experience-list {
   border-top: 1px solid var(--line);
@@ -909,6 +940,9 @@ h2 {
   .site-header {
     min-height: 680px;
   }
+  .netfield {
+    opacity: 0.6;
+  }
   .nav {
     width: 100%;
     max-width: none;
@@ -1056,6 +1090,6 @@ h2 {
     gap: 25px;
   }
   .modal-project-image {
-    order: -1;
+    display: none;
   }
 }
