@@ -49,6 +49,10 @@ p, span, h1, h2, h3, h4, li {
   z-index: 1;
 }
 
+.light-mode p, span, h1, h2, h3, h4, li {
+  text-shadow: 0 0 0;
+}
+
 .footer p, span, h1, h2, h3, h4, li {
   text-shadow: 0 0 0 !important;
 }
