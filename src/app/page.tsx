@@ -40,6 +40,26 @@ const typewriterTexts = [
 
 const projects: Project[] = [
   {
+    title: "Talos-RIT",
+    kind: "Robotics & Computer Vision",
+    tagline: (
+      <>
+        Robotic Autonomous Cameraperson
+        <br />
+        Currently in development
+      </>
+    ),
+    description:
+      "Talos is an open-source research project sponsored by RIT Dept. of Software Engineering. The project repurposes old Scorbot ER-4pc and ER-V into an autonomous camera platform to record presentation environments, such as college lectures. It tracks a subject and dynamically pans, tilts, and switches between cameras to make videos more engaging. The user interface and digital twin are developed using Tkinter, and the video feed is processed using OpenCV. The robot arms receive and process commands from the controller on an ESP32.",
+    skills: ["C", "Python", "OpenCV", "Tkinter", "Raspberry Pi"],
+    images: ["/talos1.jpg", "/talos2.png"], // take tracking video and put here
+    links: [
+      { label: "GitHub", href: "https://github.com/talos-rit" },
+      { label: "Commander", href: "https://github.com/talos-rit/commander" },
+      { label: "Operator", href: "https://github.com/talos-rit/operator" },
+    ],
+  },
+  {
     title: "Project W.A.R.D.E.N.",
     kind: "Robotics & Computer Vision",
     tagline: (
@@ -136,7 +156,7 @@ const skills: Skill[] = [
     mark: "/logos/white/python.png",
     hoverMark: "/logos/python.png",
     color: "#2d6cdf",
-    projects: ["Project W.A.R.D.E.N.", "Wikipedia Race"],
+    projects: ["Talos-RIT", "Project W.A.R.D.E.N.", "Wikipedia Race"],
   },
   {
     name: "Java",
@@ -150,7 +170,7 @@ const skills: Skill[] = [
     mark: "/logos/white/c.png",
     hoverMark: "/logos/c.png",
     color: "#4d90ff",
-    projects: ["Project W.A.R.D.E.N."],
+    projects: ["Talos-RIT", "Project W.A.R.D.E.N."],
   },
   {
     name: "JavaScript",
@@ -188,7 +208,7 @@ const skills: Skill[] = [
     mark: "/logos/white/opencv.png",
     hoverMark: "/logos/opencv.png",
     color: "#e53935",
-    projects: ["Project W.A.R.D.E.N."],
+    projects: ["Talos-RIT", "Project W.A.R.D.E.N."],
   },
 ];
 
