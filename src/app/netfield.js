@@ -79,9 +79,7 @@
     var haloR = 15;
 
     function cssVar(name, fallback) {
-      var v = getComputedStyle(document.documentElement)
-        .getPropertyValue(name)
-        .trim();
+      var v = getComputedStyle(canvas).getPropertyValue(name).trim();
       return v || fallback;
     }
 
@@ -97,7 +95,7 @@
     }
 
     function readPalette() {
-      inkNode = cssVar("--net-node", "rgb(0, 255, 60)");
+      inkNode = cssVar("--net-node", "rgba(150, 180, 157, 0.5)");
       inkEdge = cssVar("--net-edge", "rgba(150,160,180,.16)");
       inkPacket = cssVar("--net-packet", "#a855f7");
       packetRGB = toRGB(inkPacket);

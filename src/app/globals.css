@@ -7,7 +7,7 @@
   --line: rgba(241, 239, 233, 0.16);
   --accent: #a855f7;
   --net-node: rgba(180, 188, 193, 0.58);
-  --net-edge: rgba(180, 188, 193, 0.16);
+  --net-edge: rgba(154, 52, 149, 0.574);
   --net-packet: #a855f7;
 }
 
@@ -35,6 +35,9 @@ main {
   --default-font: #111315;
   --light-text: #59616b;
   --line: rgba(17, 19, 21, 0.16);
+  --net-node: rgba(166, 118, 196, 0.773);
+  --net-edge: rgb(152, 123, 168);
+  --net-packet: #a42dff;
 }
 a {
   color: inherit;
