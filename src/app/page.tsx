@@ -3,13 +3,9 @@
 import { useEffect, useState, type ReactNode } from "react";
 
 /* TODO:
- *  profile pic?
- *  favicon
  *  rephrase descriptions
  *  small bio
  *  maybe add solids board
- *  maybe add senior project
- *  center opencv
 */
 
 type Project = {
@@ -70,8 +66,8 @@ const projects: Project[] = [
       </>
     ),
     description:
-      "A 6-week long project completed during my internship at NJII COMET. Reconnaissance system built for a dense jungle environment with obstructed signal. Led the software team to create control and communication code. Implemented LAN network communication, using the drone as a range extender for the ground vehicle. Used an NVIDIA Jetson Orin Nano to implement object detection using a lightweight yolo model.",
-    skills: ["Python", "C", "Raspberry Pi", "OpenCV"],
+      "W.A.R.D.E.N is a 6-week long project completed during my internship at NJII COMET. It is a reconnaissance system built for a dense jungle environment with obstructed signal. The ground rover is controlled with a repurposed drone controller using Pygame. The system uses UDP communication, using the drone as a range extender for the ground vehicle. Object detection was implemented using an lightweight yolo model on an NVIDIA Jetson Orin Nano.",
+    skills: ["Python", "C", "OpenCV", "Raspberry Pi", "NVIDIA Jetson"],
     images: ["/WARDEN1.png", "/WARDEN2.JPG", "/WARDEN3.jpg"],
     links: [
       { label: "GitHub", href: "https://github.com/njii-comet-2024/WARDEN" },
@@ -82,7 +78,7 @@ const projects: Project[] = [
     kind: "Web application",
     tagline: "React photo gallery & photographer site",
     description:
-      "Photo gallery built using React to display images. Photo modals include camera settings used on that image and a magnifying glass hover. Automated using a JavaScript program to scrape all new exif image metadata to populate and order JSON.",
+      "Photo gallery built using React to display images. Photo modals include camera settings used on that image and a magnifying glass hover. It is automated using a JavaScript program to scrape all new exif image metadata to populate and order JSON files.",
     skills: ["React", "Next.js", "JavaScript", "GitHub Pages"],
     images: ["/gallery.png", "/gallery2.png"],
     links: [
@@ -95,7 +91,7 @@ const projects: Project[] = [
     kind: "Developer tool",
     tagline: "AI debugger VSCode extension",
     description:
-      "Integrated VSCode extension that uses OpenAI to suggest code fixes and assist with debugging. Has terminal access and native VSCode support so it has all relevant information and can suggest inline changes. Implemented a follow-up command button to either re-prompt the debugger if solution is not acceptable or check to see if the issue being debugged was resolved.",
+      "DrDebug is an integrated VSCode extension that uses OpenAI to suggest code fixes and assist with debugging. It has terminal access and native VSCode support so it has all relevant information and can suggest inline changes. The debugger includes a follow-up command button to either re-prompt the debugger if the initial solution is not acceptable or check to see if the issue being debugged was resolved.",
     skills: ["TypeScript"],
     images: ["/drdebug.png"],
     links: [
@@ -125,7 +121,7 @@ const skillOnlyProjects: Project[] = [
     kind: "Web application",
     tagline: "Donation tracking and fundraising board",
     description:
-      "A non-profit donations board where users can select specific needs to add to their cart and checkout. Includes user authentication, different types of users, and account creation, edit, and deletion. Implemented a leaderboard to rank users based on their donations.",
+      "A non-profit donations board where users can select specific needs to add to their cart and checkout. Includes user authentication, different types of users, and account creation, edit, and deletion. Includes a leaderboard to rank users based on their donations.",
     skills: ["Java", "Spring Boot"],
     images: ["/ufund.png"],
     links: [
