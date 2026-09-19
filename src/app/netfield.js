@@ -97,7 +97,7 @@
     }
 
     function readPalette() {
-      inkNode = cssVar("--net-node", "rgba(150,160,180,.5)");
+      inkNode = cssVar("--net-node", "rgb(0, 255, 60)");
       inkEdge = cssVar("--net-edge", "rgba(150,160,180,.16)");
       inkPacket = cssVar("--net-packet", "#a855f7");
       packetRGB = toRGB(inkPacket);
