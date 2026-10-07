@@ -46,9 +46,9 @@ const projects: Project[] = [
       </>
     ),
     description:
-      "Talos is an open-source research project sponsored by RIT Dept. of Software Engineering. The project repurposes old Scorbot ER-4pc and ER-V into an autonomous camera platform to record presentation environments, such as college lectures. It tracks a subject and dynamically pans, tilts, and switches between cameras to make videos more engaging. The user interface and digital twin are developed using Tkinter, and the video feed is processed using OpenCV. The robot arms receive and process commands from the controller on an ESP32.",
-    skills: ["C", "Python", "OpenCV", "Tkinter", "Raspberry Pi"],
-    images: ["/talos1.jpg", "/talos2.png"], // take tracking video and put here
+      "Talos is an open-source research project sponsored by RIT Dept. of Software Engineering. The project repurposes old Scorbot ER-4pc and ER-V into an autonomous camera platform to record presentation environments, such as college lectures. It tracks a subject and dynamically pans, tilts, and switches between cameras to make videos more engaging. The video feed is processed using OpenCV to keep a subject in frame and ignore any distractions, such as another person walking through the frame. The user interface that interacts with the robot's controller is built using React and includes a digital twin used to debug the robots' movements.",
+    skills: ["Python", "C", "OpenCV", "Raspberry Pi", "React"],
+    images: ["/talos1.jpg", "/talos2.png"], // eventually add tracking video and domain model
     links: [
       { label: "GitHub", href: "https://github.com/talos-rit" },
       { label: "Commander", href: "https://github.com/talos-rit/commander" },
