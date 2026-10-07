@@ -53,6 +53,7 @@ const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/talos-rit" },
       { label: "Commander", href: "https://github.com/talos-rit/commander" },
       { label: "Operator", href: "https://github.com/talos-rit/operator" },
+      { label: "Pi-vision", href: "https://github.com/talos-rit/pi-vision" },
     ],
   },
   {
